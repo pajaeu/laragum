@@ -48,7 +48,7 @@
                             <select class="form__input" wire:model="country">
                                 <option value="" selected disabled>Select country</option>
                                 @foreach($countries as $code => $label)
-                                    <option value="{{ $code }}" @if(old('customer_country') === $code) selected @endif>{{ $label }}</option>
+                                    <option value="{{ $code }}" @selected(old('customer_country') === $code)>{{ $label }}</option>
                                 @endforeach
                             </select>
                             @error('country')
